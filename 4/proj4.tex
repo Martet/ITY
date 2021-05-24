@@ -1,0 +1,67 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[czech]{babel}
+\usepackage[IL2]{fontenc}
+\usepackage{xurl}
+\usepackage{amssymb,amsmath}
+\usepackage[a4paper, total={17cm, 24cm}, left=2cm, top=3cm]{geometry}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+{\Huge \textsc{Vysoké učení technické v Brně}\\
+\bigskip
+{\huge \textsc{Fakulta informačních technologií}}} \\
+\vspace{\stretch{0.382}}
+{\LARGE Typografie a publikování\,--\,4. projekt}\\
+\medskip
+{\Huge Citace} \\
+\vspace{\stretch{0.618}}
+\end{center}
+{\Large \today \hfill Martin Zmitko (xzmitk01)}
+\end{titlepage}
+
+\section{Typografie}
+Typografie se zabývá písmem a~způsoby, jak ho vysázet na stránku.
+Hlavním cílem typografie je, aby si jí čtenář vůbec nevšiml \cite{May:2018}.
+To totiž znamená, že je pro něj text snadno čitelný a~logicky strukturovaný.
+Toho lze dosáhnout dodržováním typografických zásad.
+K~těm patří konzistence, střídmost v~použití efektů jako zvýraznění nebo barev a~správné rozdělení volného místa \cite{Archer:2011}.
+Typografií se zabýva již dlouho vydávaný český časopis Typografia \cite{Typografia}.
+
+\section{Nástroje pro sázení dokumentů}
+K~sázení dokumentů dle správných typografických zásad můžeme využít mnoho nástrojů.
+Asi každému je známý program Microsoft Word, na sázení profesionálně vypadajících dokumentů se ale nehodí, viz~\cite{Freeman:2017}.
+Mezi nástroje přímo dělané pro sázení profesionálních rozsáhlejších dokumentů patří např. Adobe InDesign, ten ale stojí několik set dolarů\cite{Reedsy:2018} a~není tedy správnou volbou pro každého.
+
+Jako nejlepší nástroj pro sázení dokumentů nelze doporučit nic jiného než \LaTeX.
+Je to open-source systém pro sázení dokumentů, přičemž se dokumenty píšou v markupovém jazyce, možná hůře srozumitelném neznalému.
+Pro podrobnější seznámení s~\LaTeX em se vyplatí přečíst si knihu jako např.~\cite{Rybicka:2003} nebo anglicky~\cite{Lamport:1994}. 
+
+\section{\LaTeX}
+\subsection{Citace}
+Citace jsou při psaní dokumentů velmi důležité, protože vzájemně propojují informace z~různých zdrojů a~jasně odlišují vlastní a~převzatý text.
+V~České republice platí citační norma ČSN~ISO~690, podle které by se mělo citovat.
+V~\LaTeX u se na citace používá nástroj \textsc{Bib}\TeX , například s~českým stylem~\cite{Pysny:2009}.
+
+\subsection{Matematika}
+Jednou z~hlavních předností \LaTeX u je možnost sázení matematických formulí a~symbolů s~jednoduchostí a~přesností nenalezitelnou u~žádného jiného podobného nástroje \cite{Wyrwolova:2014}.
+Ukázka jednoduchosti sázení matematického výrazu:
+\bigskip
+
+\noindent\verb|\[\Re{z} =\frac{n\pi \dfrac{\theta +\psi}{2}}{|\\
+\verb|\left(\dfrac{\theta +\psi}{2}\right)^2 + \left( \dfrac{1}{2}|\\
+\verb|\log \left\lvert\dfrac{B}{A}\right\rvert\right)^2}\]|
+\bigskip
+
+\noindent Tento výraz převzatý z~\cite{Downes:2002} se vysází následovně:
+\[\Re{z} =\frac{n\pi \dfrac{\theta +\psi}{2}}{
+\left(\dfrac{\theta +\psi}{2}\right)^2 + \left( \dfrac{1}{2}
+\log \left\lvert\dfrac{B}{A}\right\rvert\right)^2}\]
+
+\newpage
+\bibliographystyle{czechiso}
+\bibliography{proj4}
+
+\end{document}
